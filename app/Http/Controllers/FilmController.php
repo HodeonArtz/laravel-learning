@@ -87,4 +87,8 @@ class FilmController extends Controller
   {
     return $this->listFilms(genre: $genre);
   }
+  public function listFilmsByYear($year)
+  {
+    return $this->listFilms(year: $year);
+  }
 }
