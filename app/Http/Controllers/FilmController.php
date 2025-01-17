@@ -54,6 +54,26 @@ class FilmController extends Controller
     }
     return view('films.list', ["films" => $new_films, "title" => $title]);
   }
+
+  public function listFilmsByGenre($genre)
+  {
+    $films = FilmController::readFilms();
+    $filtered_films = array_filter($films, function ($film) use ($genre) {
+      return preg_match("/$genre/i", $film["genre"]);
+    });
+
+    return view("films.list", ["films" => $filtered_films, "title" => "Listado de pelis con el género $genre"]);
+  }
+  public function listFilmsByYear($year)
+  {
+    $films = FilmController::readFilms();
+    $filtered_films = array_filter($films, function ($film) use ($year) {
+      return +$film["year"] === +$year;
+    });
+
+    return view("films.list", ["films" => $filtered_films, "title" => "Listado de pelis del año $year"]);
+  }
+
   /**
    * Lista TODAS las películas o filtra x año o categoría.
    */
@@ -82,13 +102,5 @@ class FilmController extends Controller
       }
     }
     return view("films.list", ["films" => $films_filtered, "title" => $title]);
-  }
-  public function listFilmsByGenre($genre)
-  {
-    return $this->listFilms(genre: $genre);
-  }
-  public function listFilmsByYear($year)
-  {
-    return $this->listFilms(year: $year);
   }
 }
