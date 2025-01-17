@@ -112,4 +112,9 @@ class FilmController extends Controller
     });
     return view("films.list", ["films" => $films, "title" => "Películas ordenadas por año (más reciente a más antigua)"]);
   }
+  public function countFilms()
+  {
+    $countFilms  = count(FilmController::readFilms());
+    return view("films.message", ["message" => "Actualmente hay $countFilms película(s)"]);
+  }
 }

@@ -22,6 +22,7 @@
         <li><a href=/filmout/filmsByGenre/Drama>Pelis por género</a></li>
         <li><a href=/filmout/filmsByYear/1985>Pelis por año</a></li>
         <li><a href=/filmout/sortFilms>Pelis ordenadas por año</a></li>
+        <li><a href=/filmout/countFilms>¿Cuántas pelis hay?</a></li>
     </ul>
     <!-- Add Bootstrap JS and Popper.js (required for Bootstrap) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
