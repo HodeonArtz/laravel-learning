@@ -1,0 +1,1 @@
+<h2><?php echo e($message); ?></h2><?php /**PATH C:\Users\hodeo\Documents\GitHub\laravel-learning\resources\views/films/message.blade.php ENDPATH**/ ?>
