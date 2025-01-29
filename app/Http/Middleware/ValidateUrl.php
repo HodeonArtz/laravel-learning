@@ -13,7 +13,7 @@ class ValidateUrl
       "/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/";
     $imgUrl = $request->route("film-img-url");
     if (!preg_match($urlRegEx, $imgUrl)) {
-      redirect("/");
+      redirect("/")->with("error", "La URL de la imagen es inválida.");
     }
     return $next($request);
   }
