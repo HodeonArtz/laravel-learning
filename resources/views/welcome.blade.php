@@ -1,7 +1,9 @@
 @extends("layout.master")
 @section("content")
 <div class="d-flex flex-column gap-5 pt-3">
-
+  @if(session("error"))
+  @include('components.error-alert', ["message" => session("error")])
+  @endif
   <section>
     <h1 class="">Lista de Peliculas</h1>
     <ul>
@@ -19,27 +21,27 @@
       <form class="d-flex flex-column gap-3 col-lg-4">
         <div>
           <label class="form-label" for="register-film-name">Nombre</label>
-          <input class="form-control" type="text" name="film-name" id="register-film-name" placeholder="Nombre de la película">
+          <input class="form-control" type="text" name="name" id="register-film-name" placeholder="Nombre de la película">
         </div>
         <div>
           <label class="form-label" for="register-film-year">Año</label>
-          <input class="form-control" type="number" min="0"  name="film-year" id="register-film-year" placeholder="Año de estreno">
+          <input class="form-control" type="number" min="0"  name="year" id="register-film-year" placeholder="Año de estreno">
         </div>
         <div>
           <label class="form-label" for="register-film-genre">Género</label>
-          <input class="form-control" type="text" name="film-genre" id="register-film-genre" placeholder="Género de la película">
+          <input class="form-control" type="text" name="genre" id="register-film-genre" placeholder="Género de la película">
         </div>
         <div>
           <label class="form-label" for="register-film-country">País</label>
-          <input class="form-control" type="text" name="film-country" id="register-film-country" placeholder="País donde se ha estrenado">
+          <input class="form-control" type="text" name="country" id="register-film-country" placeholder="País donde se ha estrenado">
         </div>
         <div>
           <label class="form-label" for="register-film-duration">Duración (min.)</label>
-          <input class="form-control" type="number" min="0"  name="film-duration" id="register-film-duration" placeholder="Duración de la película en minutos">
+          <input class="form-control" type="number" min="0"  name="duration" id="register-film-duration" placeholder="Duración de la película en minutos">
         </div>
         <div>
           <label class="form-label" for="register-film-img-url">URL de la Imagen</label>
-          <input class="form-control" type="text" name="film-img-url" id="register-film-img-url" placeholder="URL de la imagen de la película">
+          <input class="form-control" type="text" name="img_url" id="register-film-img-url" placeholder="URL de la imagen de la película">
         </div>
         <button type="submit" class="btn btn-primary col-lg-3">Submit</button>
     </section>
