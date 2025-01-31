@@ -22,7 +22,8 @@
   </section>
     <section >
       <h2 class="mb-3">Añadir película</h2>
-      <form class="d-flex flex-column gap-3 col-lg-4">
+      <form action="/filmin/create" method="POST" class="d-flex flex-column gap-3 col-lg-4">
+        @csrf
         <div>
           <label class="form-label" for="register-film-name">Nombre</label>
           <input class="form-control" type="text" name="name" id="register-film-name" placeholder="Nombre de la película">

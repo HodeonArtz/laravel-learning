@@ -33,7 +33,7 @@ Route::middleware('year')->group(function () {
 });
 
 Route::middleware("url.img")->group(function () {
-  Route::group(["prefix"=> "filmout"], function (){
-    Route::post("create" [FilmController::class, ""])
+  Route::group(["prefix" => "filmin"], function () {
+    Route::post("create", [FilmController::class, "createFilm"])->name("create");
   });
-}) ;
+});
