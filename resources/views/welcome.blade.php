@@ -4,6 +4,10 @@
   @if(session("error"))
   @include('components.error-alert', ["message" => session("error")])
   @endif
+
+  @if(!empty($error))
+  @include('components.error-alert', ["message" => $error])
+  @endif
   <section>
     <h1 class="">Lista de Peliculas</h1>
     <ul>

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use PHPUnit\Event\Code\Throwable;
+
 
 class FilmController extends Controller
 {
@@ -119,16 +122,18 @@ class FilmController extends Controller
     return view("films.message", ["message" => "Actualmente hay $countFilms película(s)"]);
   }
 
+
+  public function isFilm($film): bool
+  {
+    if (in_array($film["name"], array_column($this->readFilms(), "name")))
+      return false;
+    return true;
+  }
+
   public function createFilm(Request $request)
   {
-    $request->validate([
-      "name" => "required|string",
-      "year" => "required|integer",
-      "genre" => "required|string",
-      "country" => "required|string",
-      "duration" => "required|integer",
-      "img_url" => "required|string",
-    ]);
+    if (!$this->isFilm($request))
+      return view("welcome", ["error" => "Ha habido un error al añadir una película o ya existe una película con el mismo nombre"]);
 
     $newFilm = [
       "name" => $request->name,
@@ -139,6 +144,11 @@ class FilmController extends Controller
       "img_url" => $request->img_url,
     ];
 
-    Storage::put("/public/films.json", json_encode($newFilm, JSON_PRETTY_PRINT));
+    Storage::put(
+      "/public/films.json",
+      json_encode($newFilm, JSON_PRETTY_PRINT)
+    );
+
+    return $this->listFilms();
   }
 }

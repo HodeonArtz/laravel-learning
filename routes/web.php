@@ -31,3 +31,9 @@ Route::middleware('year')->group(function () {
     Route::get("countFilms", [FilmController::class, "countFilms"])->name("countFilms");
   });
 });
+
+Route::middleware("url.img")->group(function () {
+  Route::group(["prefix"=> "filmout"], function (){
+    Route::post("create" [FilmController::class, ""])
+  });
+}) ;
