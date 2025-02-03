@@ -144,9 +144,11 @@ class FilmController extends Controller
       "img_url" => $request->img_url,
     ];
 
+    $films = [...FilmController::readFilms(), $newFilm];
+
     Storage::put(
       "/public/films.json",
-      json_encode($newFilm, JSON_PRETTY_PRINT)
+      json_encode($films, JSON_PRETTY_PRINT)
     );
 
     return $this->listFilms();

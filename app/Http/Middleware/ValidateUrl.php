@@ -10,7 +10,7 @@ class ValidateUrl
   function handle(Request $request, Closure $next)
   {
     $urlRegEx =
-      "/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/";
+      '/\b(?:https?|ftp):\/\/(?:www\.)?[\w-]+\.[a-z]{2,6}(?:\/[\w\-\?&=%#\.]*)?\b/i ';
     $imgUrl = $request->route("film-img-url");
     if (!preg_match($urlRegEx, $imgUrl)) {
       redirect("/")->with("error", "La URL es inválida.");
