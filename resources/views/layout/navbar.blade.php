@@ -7,7 +7,7 @@
       <a class="navbar-brand" href="{{route("index")}}">MyFilms</a>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route("index")}}">Home</a>
+          <a class="nav-link" aria-current="page" href="{{route("index")}}">Inicio</a>
         </li>
       </ul>
     </div>

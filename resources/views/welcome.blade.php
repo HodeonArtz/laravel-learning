@@ -8,8 +8,9 @@
   @if(!empty($error))
   @include('components.error-alert', ["message" => $error])
   @endif
+  <h1>Bienvenid@ a MyFilms!</h1>
   <section>
-    <h1 class="">Lista de Peliculas</h1>
+    <h2>Películas</h2>
     <ul>
       <li><a href=/filmout/oldFilms>Pelis antiguas</a></li>
       <li><a href=/filmout/newFilms>Pelis nuevas</a></li>
