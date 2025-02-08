@@ -1,7 +1,7 @@
 @extends("layout.master")
 @section("content")
 <div class="d-flex flex-column gap-5 pt-3">
-  @if(session("error"))
+  @if(!empty(session("error")))
   @include('components.error-alert', ["message" => session("error")])
   @endif
 
