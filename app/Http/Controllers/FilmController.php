@@ -132,25 +132,29 @@ class FilmController extends Controller
 
   public function createFilm(Request $request)
   {
-    if (!$this->isFilm($request))
-      return view("welcome", ["error" => "Ha habido un error al añadir una película o ya existe una película con el mismo nombre"]);
+    try {
+      if (!$this->isFilm($request))
+        return view("welcome", ["error" => "Ha habido un error al añadir una película o ya existe una película con el mismo nombre"]);
 
-    $newFilm = [
-      "name" => $request->name,
-      "year" => $request->year,
-      "genre" => $request->genre,
-      "country" => $request->country,
-      "duration" => $request->duration,
-      "img_url" => $request->img_url,
-    ];
+      $newFilm = [
+        "name" => $request->name,
+        "year" => $request->year,
+        "genre" => $request->genre,
+        "country" => $request->country,
+        "duration" => $request->duration,
+        "img_url" => $request->img_url,
+      ];
 
-    $films = [...FilmController::readFilms(), $newFilm];
+      $films = [...FilmController::readFilms(), $newFilm];
 
-    Storage::put(
-      "/public/films.json",
-      json_encode($films, JSON_PRETTY_PRINT)
-    );
+      Storage::put(
+        "/public/films.json",
+        json_encode($films, JSON_PRETTY_PRINT)
+      );
 
-    return $this->listFilms();
+      return $this->listFilms();
+    } catch (\Throwable $_) {
+      return view("welcome", ["error" => "Ha habido un error al añadir la película"]);
+    }
   }
 }
