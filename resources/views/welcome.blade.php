@@ -66,7 +66,7 @@
     </div>
   </section>
   <hr>
-    <section >
+    <section>
       <h2 class="mb-3">Añadir película</h2>
       <form action="/filmin/create" method="POST" class="d-flex flex-column gap-3 col-lg-4">
         @csrf
@@ -95,6 +95,7 @@
           <input class="form-control" required type="text" name="img_url" id="register-film-img-url" placeholder="URL de la imagen de la película">
         </div>
         <button type="submit" class="btn btn-primary col-lg-3">Submit</button>
+      </form>
     </section>
 </div>
 @endsection
