@@ -38,5 +38,189 @@
         "img_url": "https://pics.filmaffinity.com/As_bestas-275688233-large.jpg",
         "country": "Espa\u00f1a",
         "duration": 137
+    },
+    {
+        "name": "Parásitos",
+        "year": 2019,
+        "genre": "Thriller",
+        "img_url": "https://pics.filmaffinity.com/gisaengchung-432616131-large.jpg",
+        "country": "Corea del Sur",
+        "duration": 132
+    },
+    {
+        "name": "El Padrino",
+        "year": 1972,
+        "genre": "Crimen",
+        "img_url": "https://pics.filmaffinity.com/the_godfather-488102675-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 175
+    },
+    {
+        "name": "La La Land: Una historia de amor",
+        "year": 2016,
+        "genre": "Musical",
+        "img_url": "https://pics.filmaffinity.com/la_la_land-262021831-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 128
+    },
+    {
+        "name": "Amélie",
+        "year": 2001,
+        "genre": "Comedia romántica",
+        "img_url": "https://pics.filmaffinity.com/le_fabuleux_destin_d_amelie_poulain-848337470-large.jpg",
+        "country": "Francia",
+        "duration": 122
+    },
+    {
+        "name": "Intocable",
+        "year": 2011,
+        "genre": "Comedia dramática",
+        "img_url": "https://pics.filmaffinity.com/intouchables-218166359-large.jpg",
+        "country": "Francia",
+        "duration": 112
+    },
+    {
+        "name": "Cadena perpetua",
+        "year": 1994,
+        "genre": "Drama",
+        "img_url": "https://pics.filmaffinity.com/the_shawshank_redemption-576140557-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 142
+    },
+    {
+        "name": "Pulp Fiction",
+        "year": 1994,
+        "genre": "Crimen",
+        "img_url": "https://pics.filmaffinity.com/pulp_fiction-210382116-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 154
+    },
+    {
+        "name": "El viaje de Chihiro",
+        "year": 2001,
+        "genre": "Animación",
+        "img_url": "https://pics.filmaffinity.com/sen_to_chihiro_no_kamikakushi-348587850-large.jpg",
+        "country": "Japón",
+        "duration": 125
+    },
+    {
+        "name": "Cinema Paradiso",
+        "year": 1988,
+        "genre": "Drama",
+        "img_url": "https://pics.filmaffinity.com/nuovo_cinema_paradiso-312728781-large.jpg",
+        "country": "Italia",
+        "duration": 155
+    },
+    {
+        "name": "El laberinto del fauno",
+        "year": 2006,
+        "genre": "Fantasía",
+        "img_url": "https://pics.filmaffinity.com/el_laberinto_del_fauno-222302534-large.jpg",
+        "country": "México",
+        "duration": 118
+    },
+    {
+        "name": "La vida es bella",
+        "year": 1997,
+        "genre": "Drama",
+        "img_url": "https://pics.filmaffinity.com/la_vita_e_bella-646167341-large.jpg",
+        "country": "Italia",
+        "duration": 116
+    },
+    {
+        "name": "Gladiador",
+        "year": 2000,
+        "genre": "Acción",
+        "img_url": "https://pics.filmaffinity.com/gladiator-851958258-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 155
+    },
+    {
+        "name": "La lista de Schindler",
+        "year": 1993,
+        "genre": "Histórico",
+        "img_url": "https://pics.filmaffinity.com/schindler_s_list-473662617-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 195
+    },
+    {
+        "name": "Her",
+        "year": 2013,
+        "genre": "Ciencia ficción",
+        "img_url": "https://pics.filmaffinity.com/her-716403893-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 126
+    },
+    {
+        "name": "La princesa Mononoke",
+        "year": 1997,
+        "genre": "Animación",
+        "img_url": "https://pics.filmaffinity.com/mononoke_hime-598406013-large.jpg",
+        "country": "Japón",
+        "duration": 134
+    },
+    {
+        "name": "El gran hotel Budapest",
+        "year": 2014,
+        "genre": "Comedia",
+        "img_url": "https://pics.filmaffinity.com/the_grand_budapest_hotel-247331769-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 99
+    },
+    {
+        "name": "El club de la pelea",
+        "year": 1999,
+        "genre": "Drama",
+        "img_url": "https://pics.filmaffinity.com/fight_club-320750671-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 139
+    },
+    {
+        "name": "Coco",
+        "year": 2017,
+        "genre": "Animación",
+        "img_url": "https://pics.filmaffinity.com/coco-155051069-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 105
+    },
+    {
+        "name": "Oldboy",
+        "year": 2003,
+        "genre": "Thriller",
+        "img_url": "https://pics.filmaffinity.com/oldeuboi-520509097-large.jpg",
+        "country": "Corea del Sur",
+        "duration": 120
+    },
+    {
+        "name": "La forma del agua",
+        "year": 2017,
+        "genre": "Fantasía",
+        "img_url": "https://pics.filmaffinity.com/the_shape_of_water-856013521-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 123
+    },
+    {
+        "name": "Inception",
+        "year": 2010,
+        "genre": "Ciencia ficción",
+        "img_url": "https://pics.filmaffinity.com/inception-652954101-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 148
+    },
+    {
+        "name": "Réquiem por un sueño",
+        "year": 2000,
+        "genre": "Drama",
+        "img_url": "https://pics.filmaffinity.com/requiem_for_a_dream-174867645-large.jpg",
+        "country": "Estados Unidos",
+        "duration": 102
+    },
+    {
+        "name": "El secreto de sus ojos",
+        "year": 2009,
+        "genre": "Thriller",
+        "img_url": "https://pics.filmaffinity.com/el_secreto_de_sus_ojos-483213496-large.jpg",
+        "country": "Argentina",
+        "duration": 129
     }
 ]
