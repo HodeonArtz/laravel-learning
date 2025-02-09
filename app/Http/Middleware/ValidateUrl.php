@@ -14,7 +14,7 @@ class ValidateUrl
       '/[-a-zA-Z0-9@:%_\+.~#?&=\/]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&=\/]*)?/';
     $imgUrl = $request->img_url;
     if (!preg_match($urlRegEx, $imgUrl)) {
-      return redirect("/")->with("error", "La URL es inválida.");
+      return redirect("/")->with("error", "La URL $imgUrl es inválida.");
     }
     return $next($request);
   }

@@ -134,7 +134,7 @@ class FilmController extends Controller
   {
     try {
       if (!$this->isFilm($request))
-        return view("welcome", ["error" => "Ha habido un error al añadir una película o ya existe una película con el mismo nombre"]);
+        return view("welcome", ["films" => FilmController::readFilms(), "error" => "Ha habido un error al añadir una película o ya existe una película con el mismo nombre"]);
 
       $newFilm = [
         "name" => $request->name,
@@ -154,7 +154,7 @@ class FilmController extends Controller
 
       return $this->listFilms();
     } catch (\Throwable $_) {
-      return view("welcome", ["error" => "Ha habido un error al añadir la película"]);
+      return view("welcome", ["films" => FilmController::readFilms(), "error" => "Ha habido un error al añadir la película"]);
     }
   }
 }
