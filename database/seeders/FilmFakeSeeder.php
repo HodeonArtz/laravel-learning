@@ -23,7 +23,7 @@ class FilmFakeSeeder extends Seeder
         "genre" => $faker->words(1, true),
         "country" => $faker->countryISOAlpha3(),
         "duration" => $faker->numberBetween(90, 320),
-        "img_url" => $faker->url(),
+        "img_url" => $faker->imageUrl(),
       ]);
     }
   }
