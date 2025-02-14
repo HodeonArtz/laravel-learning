@@ -19,8 +19,8 @@ return new class extends Migration
       $table->string("country", 30);
       $table->integer("duration");
       $table->string("img_url");
-      $table->timestamp("created_at");
-      $table->timestamp("updated_at");
+      $table->timestamp("created_at")->useCurrent();
+      $table->timestamp("updated_at")->useCurrent()->useCurrentOnUpdate();
     });
   }
 
