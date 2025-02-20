@@ -19,7 +19,7 @@ class FilmFakeSeeder extends Seeder
     for ($i = 0; $i < 10; $i++) {
       DB::table("films")->insert([
         "name" => $faker->words(3, true),
-        "year" => $faker->year(),
+        "year" => $faker->numberBetween(1900, 2024),
         "genre" => $faker->words(1, true),
         "country" => $faker->countryISOAlpha3(),
         "duration" => $faker->numberBetween(90, 320),
