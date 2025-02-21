@@ -4,7 +4,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <a class="navbar-brand" href="{{route("index")}}">MyFilms</a>
+      <a class="navbar-brand" href="{{route("index")}}"><img src="{{URL::to("/img/film-reel-icon.webp")}}" style="width: 32px !important; aspect-ratio: 1/1;" alt="logo" > MyFilms</a>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{{route("index")}}">Inicio</a>
