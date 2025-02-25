@@ -17,7 +17,7 @@ return new class extends Migration
       $table->string("surname", 30);
       $table->date("birthdate");
       $table->string("country", 30);
-      $table->int("amount_of_awards");
+      $table->integer("amount_of_awards");
       $table->timestamp("created_at")->useCurrent();
       $table->timestamp("updated_at")->useCurrent()->useCurrentOnUpdate();
     });
