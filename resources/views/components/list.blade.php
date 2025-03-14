@@ -4,7 +4,7 @@
 <h1>{{$title}}</h1>
 
 @if(empty($elements))
-    <FONT COLOR="red">No se ha encontrado ninguna película</FONT>
+    <FONT COLOR="red">No se ha encontrado nada.</FONT>
 @else
     <div class="d-flex justify-content-center my-5">
     <table class="table">
@@ -25,9 +25,9 @@
 
         @foreach($elements as $element)
             <tr>
-              @foreach ($element as $column => $data)
+              @foreach ($element as $columnName => $data)
                 <td>
-                  @if (str_contains($column, "img"))
+                  @if (str_contains($columnName, "img"))
                   <img src={{$data}} style="width: 100px; heigth: 120px;" />
                   @else
                     {{ $data }} 
