@@ -37,7 +37,7 @@ class FilmController extends Controller
       if ($film['year'] < $year)
         $old_films[] = $film;
     }
-    return view('components.list', ["films" => $old_films, "title" => $title]);
+    return view('components.list', ["elements" => $old_films, "title" => $title]);
   }
   /**
    * List films younger than input year
@@ -56,7 +56,7 @@ class FilmController extends Controller
       if ($film['year'] >= $year)
         $new_films[] = $film;
     }
-    return view('components.list', ["films" => $new_films, "title" => $title]);
+    return view('components.list', ["elements" => $new_films, "title" => $title]);
   }
 
   public function listFilmsByGenre($genre)
@@ -66,7 +66,7 @@ class FilmController extends Controller
       return preg_match("/$genre/i", $film["genre"]);
     });
 
-    return view("components.list", ["films" => $filtered_films, "title" => "Listado de pelis con el género $genre"]);
+    return view("components.list", ["elements" => $filtered_films, "title" => "Listado de pelis con el género $genre"]);
   }
   public function listFilmsByYear($year)
   {
@@ -75,7 +75,7 @@ class FilmController extends Controller
       return +$film["year"] === +$year;
     });
 
-    return view("components.list", ["films" => $filtered_films, "title" => "Listado de pelis del año $year"]);
+    return view("components.list", ["elements" => $filtered_films, "title" => "Listado de pelis del año $year"]);
   }
 
   /**
@@ -105,7 +105,7 @@ class FilmController extends Controller
         $films_filtered[] = $film;
       }
     }
-    return view("components.list", ["films" => $films_filtered, "title" => $title]);
+    return view("components.list", ["elements" => $films_filtered, "title" => $title]);
   }
 
   public function sortFilms()
@@ -114,7 +114,7 @@ class FilmController extends Controller
     usort($films, function ($a, $b) {
       return $b['year'] <=> $a['year'];
     });
-    return view("components.list", ["films" => $films, "title" => "Películas ordenadas por año (más reciente a más antigua)"]);
+    return view("components.list", ["elements" => $films, "title" => "Películas ordenadas por año (más reciente a más antigua)"]);
   }
   public function countFilms()
   {
