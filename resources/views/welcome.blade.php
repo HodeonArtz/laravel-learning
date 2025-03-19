@@ -113,6 +113,9 @@
           <ul class="col col-3 list-group list-group-flush">
             <li class="list-group-item"><a
                 class="link-underline-opacity-0 link-underline-opacity-75-hover  link-underline"
+                href=/actorout/actors><strong>Todos los actores</strong></a></li>
+            <li class="list-group-item"><a
+                class="link-underline-opacity-0 link-underline-opacity-75-hover  link-underline"
                 href=/actorout/countActors>¿Cuántos actores hay en MyFilms?</a></li>
           </ul>
         </div>
