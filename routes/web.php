@@ -40,4 +40,5 @@ Route::middleware("url.img")->group(function () {
 
 Route::group(["prefix" => "actorout"], function () {
   Route::get("countActors", [ActorController::class, "countActors"])->name("countActors");
+  Route::get("actors", [ActorController::class, "listAllActors"])->name("actors");
 });
