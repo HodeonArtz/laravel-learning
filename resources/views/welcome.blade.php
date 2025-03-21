@@ -110,10 +110,23 @@
       <h2>Actores</h2>
       <div class="container">
         <div class="row">
-          <ul class="col col-3 list-group list-group-flush ">
+          <ul class="col col-5 list-group list-group-flush ">
             <li class="list-group-item"><a
                 class="link-underline-opacity-0 link-underline-opacity-75-hover  link-underline"
                 href=/actorout/actors><strong>Todos los actores</strong></a></li>
+            <li class="list-group-item">
+              <form class="d-flex justify-content-between align-items-center gap-2">
+                <label for="actor-decade-select">Filtrar por decada</label>
+                <select class="form-select d-inline" id="actor-decade-select" aria-label="decade select">
+                  <option value="1980">1980's</option>
+                  <option value="1990">1990's</option>
+                  <option value="2000">2000's</option>
+                  <option value="2010">2010's</option>
+                  <option value="2020">2020's</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Filtrar</button>
+              </form>
+            </li>
             <li class="list-group-item"><a
                 class="link-underline-opacity-0 link-underline-opacity-75-hover  link-underline"
                 href=/actorout/countActors>¿Cuántos actores hay en MyFilms?</a></li>
