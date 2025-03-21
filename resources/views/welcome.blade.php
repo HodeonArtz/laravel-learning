@@ -115,18 +115,19 @@
                 class="link-underline-opacity-0 link-underline-opacity-75-hover  link-underline"
                 href=/actorout/actors><strong>Todos los actores</strong></a></li>
             <li class="list-group-item">
-              <form class="d-flex justify-content-between align-items-center gap-2">
-                @csrf
-                <label for="actor-decade-select">Filtrar por decada</label>
-                <select class="form-select d-inline" id="actor-decade-select" aria-label="decade select">
-                  <option value="1980">1980's</option>
-                  <option value="1990">1990's</option>
-                  <option value="2000">2000's</option>
-                  <option value="2010">2010's</option>
-                  <option value="2020">2020's</option>
-                </select>
-                <button type="submit" class="btn btn-primary">Filtrar</button>
-              </form>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Actores filtrado por decada
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="/actorout/actorsByDecade/1980" class="dropdown-item">1980's</a></li>
+                  <li><a href="/actorout/actorsByDecade/1990" class="dropdown-item">1990's</a></li>
+                  <li><a href="/actorout/actorsByDecade/2000" class="dropdown-item">2000's</a></li>
+                  <li><a href="/actorout/actorsByDecade/2010" class="dropdown-item">2010's</a></li>
+                  <li><a href="/actorout/actorsByDecade/2020" class="dropdown-item">2020's</a></li>
+                </ul>
+              </div>
             </li>
             <li class="list-group-item"><a
                 class="link-underline-opacity-0 link-underline-opacity-75-hover  link-underline"
