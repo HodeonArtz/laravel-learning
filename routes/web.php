@@ -42,5 +42,5 @@ Route::group(["prefix" => "actorout"], function () {
   Route::get("countActors", [ActorController::class, "countActors"])->name("countActors");
   Route::get("actors", [ActorController::class, "listActors"])->name("actors");
   Route::get("actorsByDecade/{year}", [ActorController::class, "listActorsByDecade"])->name("actors");
-  Route::delete("actors", [ActorController::class, "destroyActor"])->name("destroyActor");
 });
+Route::delete("actors", [ActorController::class, "destroyActor"])->name("destroyActor");
