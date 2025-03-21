@@ -28,7 +28,7 @@ class ActorController extends Controller
     $actorCount = DB::table("actors")->count();
     return view("components.message", ["title" => "Actores", "message" => "Actualmente hay $actorCount actor(es)/actriz(ces)"]);
   }
-  public function destroyActor(int $id)
+  public function destroyActor(string $id)
   {
     $affectedRows = DB::table("actors")->delete($id);
 
