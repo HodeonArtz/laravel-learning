@@ -116,6 +116,7 @@
                 href=/actorout/actors><strong>Todos los actores</strong></a></li>
             <li class="list-group-item">
               <form class="d-flex justify-content-between align-items-center gap-2">
+                @csrf
                 <label for="actor-decade-select">Filtrar por decada</label>
                 <select class="form-select d-inline" id="actor-decade-select" aria-label="decade select">
                   <option value="1980">1980's</option>
