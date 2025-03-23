@@ -28,6 +28,12 @@ class FilmController extends Controller
 
     return array_merge($jsonFilms, $databaseFilms);
   }
+
+  public function index()
+  {
+    return json_encode(FilmController::readFilms());
+  }
+
   /**
    * List films older than input year 
    * if year is not infomed 2000 year will be used as criteria
