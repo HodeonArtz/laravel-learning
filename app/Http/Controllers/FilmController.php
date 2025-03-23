@@ -22,8 +22,8 @@ class FilmController extends Controller
       json_decode(
         json_encode(
           DB::table("films")->select(["name", "year", "genre", "img_url", "country", "duration"])->get()->toArray(),
-          true
-        )
+        ),
+        true
       );
 
     return array_merge($jsonFilms, $databaseFilms);
