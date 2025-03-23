@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use PHPUnit\Event\Code\Throwable;
 
@@ -16,8 +17,16 @@ class FilmController extends Controller
    */
   public static function readFilms(): array
   {
-    $films = Storage::json('/public/films.json');
-    return $films;
+    $jsonFilms = Storage::json('/public/films.json');
+    $databaseFilms =
+      json_decode(
+        json_encode(
+          DB::table("films")->select(["name", "year", "genre", "img_url", "country", "duration"])->get()->toArray(),
+          true
+        )
+      );
+
+    return array_merge($jsonFilms, $databaseFilms);
   }
   /**
    * List films older than input year 
