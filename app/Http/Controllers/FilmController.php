@@ -147,6 +147,8 @@ class FilmController extends Controller
 
   public function createFilm(Request $request)
   {
+    $saveInSQL = true;
+
     try {
       if (!$this->isFilm($request))
         return view("welcome", ["films" => FilmController::readFilms(), "error" => "Ya existe una película con el nombre {$request->name}"]);
@@ -162,10 +164,15 @@ class FilmController extends Controller
 
       $films = [...FilmController::readFilms(), $newFilm];
 
-      Storage::put(
-        "/public/films.json",
-        json_encode($films, JSON_PRETTY_PRINT)
-      );
+      if ($saveInSQL)
+        DB::table("films")->insert($newFilm);
+      else
+        Storage::put(
+          "/public/films.json",
+          json_encode($films, JSON_PRETTY_PRINT)
+        );
+
+
 
       return $this->listFilms();
     } catch (\Throwable $_) {
