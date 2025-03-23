@@ -127,7 +127,7 @@ class FilmController extends Controller
   }
   public function countFilms()
   {
-    $countFilms  = count(FilmController::readFilms());
+    $countFilms  = DB::table("films")->count();
     return view("components.message", ["title" => "Películas", "message" => "Actualmente hay $countFilms película(s)"]);
   }
 
