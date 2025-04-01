@@ -28,4 +28,11 @@ class Film extends Model
    * @var bool
    */
   public $incrementing = true;
+
+  /**
+   * Indicates if the model should be timestamped.
+   *
+   * @var bool
+   */
+  public $timestamps = true;
 }
