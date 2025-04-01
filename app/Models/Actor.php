@@ -15,4 +15,11 @@ class Actor extends Model
    * @var string
    */
   protected $table = 'actors';
+
+  /**
+   * Indicates if the IDs are auto-incrementing.
+   *
+   * @var bool
+   */
+  public $incrementing = true;
 }
