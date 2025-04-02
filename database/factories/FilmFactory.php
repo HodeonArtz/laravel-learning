@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Film;
+use Faker\Factory as FakerFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,7 +21,7 @@ class FilmFactory extends Factory
 
   public function definition(): array
   {
-    $faker = Factory::create();
+    $faker = FakerFactory::create();
     return [
       "name" => $faker->words(3, true),
       "year" => $faker->numberBetween(1900, 2024),
