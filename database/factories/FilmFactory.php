@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Film;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,11 +10,14 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class FilmFactory extends Factory
 {
+  protected $model = Film::class;
+
   /**
    * Define the model's default state.
    *
    * @return array<string, mixed>
    */
+
   public function definition(): array
   {
     $faker = Factory::create();
