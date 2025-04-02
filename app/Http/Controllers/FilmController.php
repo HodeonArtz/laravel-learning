@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Film;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -21,7 +22,7 @@ class FilmController extends Controller
     $databaseFilms =
       json_decode(
         json_encode(
-          DB::table("films")->select(["name", "year", "genre", "img_url", "country", "duration"])->get()->toArray(),
+          Film::select(["name", "year", "genre", "img_url", "country", "duration"])->get()->toArray(),
         ),
         true
       );
@@ -133,8 +134,9 @@ class FilmController extends Controller
   }
   public function countFilms()
   {
-    $countFilms  = DB::table("films")->count();
-    return view("components.message", ["title" => "Películas", "message" => "Actualmente hay $countFilms película(s)"]);
+    // countFilms() uses only the films stored in the Database
+    $countFilms  = Film::count();
+    return view("components.message", ["title" => "Películas", "message" => "Actualmente hay $countFilms película(s) en la base de datos"]);
   }
 
 
@@ -165,7 +167,7 @@ class FilmController extends Controller
       $films = [...FilmController::readFilms(), $newFilm];
 
       if ($saveInSQL)
-        DB::table("films")->insert($newFilm);
+        Film::insert($newFilm);
       else
         Storage::put(
           "/public/films.json",
