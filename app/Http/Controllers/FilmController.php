@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Film;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -21,7 +22,7 @@ class FilmController extends Controller
     $databaseFilms =
       json_decode(
         json_encode(
-          DB::table("films")->select(["name", "year", "genre", "img_url", "country", "duration"])->get()->toArray(),
+          Film::select(["name", "year", "genre", "img_url", "country", "duration"])->get()->toArray(),
         ),
         true
       );
