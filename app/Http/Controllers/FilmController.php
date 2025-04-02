@@ -167,7 +167,7 @@ class FilmController extends Controller
       $films = [...FilmController::readFilms(), $newFilm];
 
       if ($saveInSQL)
-        DB::table("films")->insert($newFilm);
+        Film::insert($newFilm);
       else
         Storage::put(
           "/public/films.json",
