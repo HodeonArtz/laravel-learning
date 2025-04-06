@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Actor;
 use App\Models\Film;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,7 +16,7 @@ class FilmActorSeeder extends Seeder
   public function run(): void
   {
     $filmIds = Film::pluck("id")->toArray();
-    $actorIds = DB::table("actors")->pluck("id")->toArray();
+    $actorIds = Actor::pluck("id")->toArray();
     foreach ($filmIds as $filmId) {
       $randomAmountOfRelations = rand(1, 3);
 
