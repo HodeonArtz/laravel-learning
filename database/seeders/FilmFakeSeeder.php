@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Film;
 use Faker\Factory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -14,17 +15,6 @@ class FilmFakeSeeder extends Seeder
    */
   public function run(): void
   {
-    $faker = Factory::create();
-
-    for ($i = 0; $i < 10; $i++) {
-      DB::table("films")->insert([
-        "name" => $faker->words(3, true),
-        "year" => $faker->numberBetween(1900, 2024),
-        "genre" => $faker->words(1, true),
-        "country" => $faker->countryISOAlpha3(),
-        "duration" => $faker->numberBetween(90, 320),
-        "img_url" => $faker->imageUrl(),
-      ]);
-    }
+    Film::factory()->count(10)->create();
   }
 }
