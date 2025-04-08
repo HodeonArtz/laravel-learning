@@ -9,6 +9,15 @@ use Illuminate\Support\Facades\DB;
 
 class ActorController extends Controller
 {
+  public function index()
+  {
+    $actors = Actor::all()->map(function ($actor) {
+      return [...$actor->toArray(), "films" => $actor->films()->get()->toArray()];
+    });
+
+    return $actors->toJson();
+  }
+
   public function listActors()
   {
     // use json_encode and json_decode to transform object to associative array
