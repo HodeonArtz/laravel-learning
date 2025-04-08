@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Actor extends Model
 {
@@ -36,4 +37,9 @@ class Actor extends Model
    * @var bool
    */
   public $timestamps = true;
+
+  public function films(): BelongsToMany
+  {
+    return $this->belongsToMany(Film::class, "films_actors");
+  }
 }
