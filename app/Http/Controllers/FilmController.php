@@ -35,6 +35,15 @@ class FilmController extends Controller
     return json_encode(FilmController::readFilms());
   }
 
+  public function indexWithActors()
+  {
+    $films = Film::all()->map(function ($film) {
+      return [...$film->toArray(), "actors" => $film->actors()->get()->toArray()];
+    });
+
+    return $films->toJson();
+  }
+
   /**
    * List films older than input year 
    * if year is not infomed 2000 year will be used as criteria
